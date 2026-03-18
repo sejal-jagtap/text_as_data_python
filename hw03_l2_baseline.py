@@ -48,16 +48,11 @@ y_test = test_df["label"]
 
 # -----------------------------
 # 3. TF-IDF Vectorization
-# ⚠️ MATCH WEEK 09 EXACTLY
 # -----------------------------
 vectorizer = TfidfVectorizer(
-    max_features=5000,
-    stop_words="english",
-    
-    # 👇 Uncomment ONLY if used in tutorial
-    # min_df=5,
-    # max_df=0.8,
-    # ngram_range=(1,1)
+    lowercase=True,
+    min_df=5,
+    max_df=0.9
 )
 
 X_train_tfidf = vectorizer.fit_transform(X_train)
@@ -68,7 +63,7 @@ print("\nTF-IDF shape:", X_train_tfidf.shape)
 
 # -----------------------------
 # 4. Train Logistic Regression (L2)
-# ⚠️ Keep consistent solver for comparison
+# Keep consistent solver for comparison
 # -----------------------------
 model_l2 = LogisticRegression(
     penalty="l2",
