@@ -207,3 +207,6 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+data/merchant_labeled_chunks.json
+models/w2v_full.bin.syn1neg.npy
+models/w2v_full.bin.wv.vectors.npy
