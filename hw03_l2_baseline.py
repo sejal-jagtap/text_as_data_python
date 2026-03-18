@@ -28,7 +28,7 @@ def load_json(path):
 train_df = load_json(TRAIN_PATH)
 test_df = load_json(TEST_PATH)
 
-# Fix column names (based on your JSON structure)
+# Fix column names 
 train_df.columns = ["text", "label"]
 test_df.columns = ["text", "label"]
 
@@ -82,7 +82,7 @@ y_prob = model_l2.predict_proba(X_test_tfidf)[:, 1]
 
 
 # -----------------------------
-# 6. Evaluation (REQUIRED OUTPUTS)
+# 6. Evaluation 
 # -----------------------------
 
 print("\n=== Confusion Matrix ===")
