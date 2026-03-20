@@ -81,9 +81,8 @@ print("\nTF-IDF shape:", X_train_tfidf.shape)
 # Keep consistent solver for comparison
 # -----------------------------
 model_l2 = LogisticRegression(
-    penalty="l2",
-    solver="liblinear",   # consistent with L1 later
-    max_iter=1000
+    max_iter=1000,
+    n_jobs=1
 )
 
 model_l2.fit(X_train_tfidf, y_train)
